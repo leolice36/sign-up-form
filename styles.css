@@ -32,6 +32,13 @@
     font-weight: lighter;
     font-style: italic;
   }
+
+  @font-face {
+    font-family: 'norse';
+    src: url('fonts/Norse-Bold.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+  }
 /* 1. Use a more-intuitive box-sizing model */
 *, *::before, *::after {
     box-sizing: border-box;
@@ -82,7 +89,7 @@ h1, h2, h3, h4, h5, h6 {
 
 
 form {
-    font: 1em sans-serif;
+    font: 1rem sans-serif;
     max-width: 20vw;
 }
 
@@ -118,62 +125,105 @@ body{
 }
 
 .left {
-    width: 40vw;
-    background-color: aquamarine;
+    min-width: 567px;
+    max-width: 1198px;
     background-image: url('./images/viking.webp');
-    background-size: 280%;
-    background-position: 85% -12vh;
+    background-color: #b58503;
+    background-size: auto;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: -50rem -24.5rem;
+    z-index: 0;
+    
 }
+
+.left::before {
+    content: '';
+    position: absolute;
+    min-width: calc(567px + 2rem);
+    max-width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.05) 0%, rgba(0, 0, 0, 0.75) 100%);
+    z-index: -1;
+}
+
+.logo-container{
+    min-width: 567px;
+    max-width: 1198px;
+    display: flex;
+    background-color: rgba(21, 32, 41, 0.5);
+    z-index: 1;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    margin-top: calc(30vh - calc(187px / 2));
+
+}
+.odin{
+    color: #ffffff;
+    font-size: 5rem;
+    font-weight: bold;
+    padding-left: 2rem;
+    font-family: 'norse';
+}
+
+#viking{
+    width: 15%;
+    height: auto;
+}
+
 .right {
     width: 60vw;
     display: flex;
     flex-direction: column;
     align-items: left;
     justify-content: center;
-    background-color: #070b0e;
+    background-color: #000000;
     color: #dae2e7;
+    flex-grow: 1;
     
 }
 
-.right > *{
-    margin-bottom: 2em;
+.right > * > *{
+    margin-bottom: 2rem;
     margin-left: 50px;
-    
-    
 }
 
 .form-container{
-    background-color: #152029;
-    width: 70vw;
-    margin-left: 0;
+    background: linear-gradient(90deg, rgba(21,32,41,1) 0%, rgba(21,32,41,1) 50%, rgba(21,32,41,0) 100%);
+    margin-left: 50px;
     color: #dae2e7;
+    padding: 1rem 0 1rem 0;
 }
 
 .form-container > *{
-    margin: 1em 1em 0 50px;
+    margin: 1rem 1rem 0 2rem;
     padding-top: 20px;
+
 }
 
 #formexact {
     display: flex;
-    padding-bottom: 1em;
+    padding-bottom: 1rem;
     font-size: 0.833em;
-    margin: 0 0 1em 50px ;
+    margin: 0 0 0.5rem 2rem ;
     padding: 0;
 }
 
 form > div {
-    min-width: 20vw;
-    margin: 0 3em 0 0;
+    min-width: 20rem;
+}
+.left-form {    
+    margin: 0 3rem 0 0;
 }
 
 label{
     display: block;
-    margin: 0.5em 0 0.08em 0;
+    margin: 0.5rem 0 0.25rem 0;
 }
 input{
     display: block;
-    margin: 0em 0 1.1em 0;
+    margin: 0rem 0 1.1rem 0;
 }
 
 button {
@@ -182,25 +232,31 @@ button {
     padding: 12px 24px;
     border-radius: 8px;
     border: 0;
-    background-color: #152029;
+    background-color: #c79200;
     color: #ffffff;
     font-weight: bolder;
-    margin-left: 0em;
-    margin-bottom: 1em;
+    margin-left: 0rem;
+    margin-bottom: 1rem;
   }
 
   .hero > * {
-    margin-bottom: 1em; 
-    font-size: 2.986em;
+    margin-bottom: 1rem; 
+    font-size: 2.986rem;
     font-weight: bold;
   }
   .another {
     font-weight: lighter;
-    font-size: 2.074em;
+    font-size: 2.074rem;
   }
   .lets {
     font-weight: bold;
-    font-size: 1.2em;
-    margin-bottom: 1em;
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
     padding: 0;
   }
+  a {
+    color:azure;
+    
+  }
+
+  

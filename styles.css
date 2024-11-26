@@ -216,7 +216,7 @@ body{
 }
 
 .hero {
-    margin-bottom: 4rem;
+    margin-bottom: 2rem;
 }
 
 .form-container{
@@ -224,6 +224,7 @@ body{
     margin-left: 50px;
     color: #dae2e7;
     padding: 1rem 0 1rem 0;
+    margin-bottom: 0.1rem;
 }
 
 .form-container > *{
@@ -270,6 +271,7 @@ button {
     font-weight: bolder;
     margin-left: 0rem;
     margin-bottom: 1rem;
+    margin-top: 1rem;
   }
 
 button:hover {

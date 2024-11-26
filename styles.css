@@ -126,60 +126,86 @@ body{
 
 .left {
     min-width: 567px;
-    max-width: 1198px;
     background-image: url('./images/viking.webp');
     background-color: #b58503;
     background-size: auto;
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-position: -50rem -24.5rem;
+    position: relative;
     z-index: 0;
+    display: flex;
+    flex-direction: column;
+    
     
 }
 
-.left::before {
+.left::after {
     content: '';
     position: absolute;
-    min-width: calc(567px + 2rem);
-    max-width: 100%;
+    top: 0;
+    left: 0;
+    width: 100%;
     height: 100%;
-    background: linear-gradient(135deg, rgba(255, 255, 255, 0.05) 0%, rgba(0, 0, 0, 0.75) 100%);
+    background: linear-gradient(
+        115deg, 
+        rgba(255, 255, 255, 0.0) 0%,
+        rgba(0, 0, 0, 1) 80%,
+        rgba(0, 0, 0, 1) 100%
+        );
     z-index: -1;
+    
+    
 }
 
 .logo-container{
-    min-width: 567px;
-    max-width: 1198px;
     display: flex;
-    background-color: rgba(21, 32, 41, 0.5);
-    z-index: 1;
-    justify-content: center;
+    background: linear-gradient(to bottom, 
+        rgba(0, 0, 0, 0) 0%,             /* Transparent at the top */
+        rgba(0, 0, 0, 0.5) 49%,       /* rgba color in the middle */
+        rgba(0, 0, 0, 0.5) 51%,
+        rgba(0, 0, 0, 0) 100%);          /* Transparent at the bottom */
+    justify-content: left;
     align-items: center;
     overflow: hidden;
-    margin-top: calc(30vh - calc(187px / 2));
-
+    /* margin-top: calc(30vh - calc(6rem)); */
+    padding: 2rem 0 6rem 0;
+    position: relative;
 }
 .odin{
-    color: #ffffff;
-    font-size: 5rem;
+    width: 50%;
+    font-size: 6rem;
     font-weight: bold;
     padding-left: 2rem;
     font-family: 'norse';
+    line-height: 0.95;
+    /* color: #ffffff; */
+    background-image: linear-gradient(135deg, #c79200b3, #c39c02, #c79200b3); /* The gradient */
+    -webkit-background-clip: text; /* Clips the background to the text */
+    color: transparent;
+    background-size: 100% 100%; /* Makes the gradient more dynamic */
 }
 
 #viking{
-    width: 15%;
+    display: block;
+    width: 18%;
     height: auto;
+    position: relative;
+    z-index: 1;
+    background-image: linear-gradient(135deg, #c79200b3, #c39c02, #c79200b3); /* The gradient */
+    background-size: 300% 300%; /* Makes the gradient more dynamic */
+    padding: 0.9rem;
+    border-radius: 19px;
+    clip-path: polygon(15% 0, 85% 0, 100% 15%, 100% 85%, 85% 100%, 15% 100%, 0 85%, 0 15%);
 }
-
 .right {
-    width: 60vw;
     display: flex;
+    width: 60vw;
     flex-direction: column;
     align-items: left;
-    justify-content: center;
+    justify-content:end;
     background-color: #000000;
-    color: #dae2e7;
+    color: #ffffff;
     flex-grow: 1;
     
 }
@@ -189,8 +215,12 @@ body{
     margin-left: 50px;
 }
 
+.hero {
+    margin-bottom: 4rem;
+}
+
 .form-container{
-    background: linear-gradient(90deg, rgba(21,32,41,1) 0%, rgba(21,32,41,1) 50%, rgba(21,32,41,0) 100%);
+    background: linear-gradient(90deg, rgba(21,32,41,0.2) 0%, rgba(21,32,41,0.7) 30%, rgba(21,32,41,0) 100%);
     margin-left: 50px;
     color: #dae2e7;
     padding: 1rem 0 1rem 0;
@@ -211,7 +241,7 @@ body{
 }
 
 form > div {
-    min-width: 20rem;
+    min-width: 15rem;
 }
 .left-form {    
     margin: 0 3rem 0 0;
@@ -232,13 +262,26 @@ button {
     padding: 12px 24px;
     border-radius: 8px;
     border: 0;
-    background-color: #c79200;
+    /* background-color: #c79200; */
+    background: linear-gradient(135deg, #c79200b3, #ecbd01, #c79200b3);
+    background-size: 400% 400%; /* Makes the gradient more dynamic */
+    transition: background 0.8s ease-in-out, transform 0.3s ease-in-out; /* Smooth transition */
     color: #ffffff;
     font-weight: bolder;
     margin-left: 0rem;
     margin-bottom: 1rem;
   }
 
+button:hover {
+    transform: scale(1.1); /* Slight grow effect on hover */
+    background-position: right center; /* Shifts the gradient */
+    background-size: 200% 200%; /* Expands the gradient for shine effect */
+}
+
+button:active {
+    transform: scale(0.95); /* Button slightly shrinks when pressed */
+    background-size: 100% 100%; /* Resets the gradient */
+}
   .hero > * {
     margin-bottom: 1rem; 
     font-size: 2.986rem;
@@ -259,4 +302,7 @@ button {
     
   }
 
+  .lower-part{
+    margin-bottom: 12rem;
+  }
   

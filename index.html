@@ -16,27 +16,61 @@
     <section class = "right">
         <div class="right-content-container">
             <section class = "hero">
-                <div>Wtf is this! This is so nice!</div>
-                <div class="another">ANOTHER ONE!</div>
+                <div>Plunder Your Path to <div class="mastery">MASTERY</div></div>
+                <div class="another">Unearth the secrets of absolutely nothing. Guided by ancient guesswork, lose your time and question your choices.</div>
             </section>
             <section class="form-container">
-                <div class="lets">Let us go!</div>
+                <div class="lets">Join and gain exclusive access to... well, we're not quite sure yet.</div>
                 <form id ="formexact" action="random.com/path" method="post">
                     <div class="left-form">
-                        <label for="n1">FIRST NAME</label>
-                        <input type="text" id="n1" name="first-name">
-                        <label for="n2">LAST NAME</label>
-                        <input type="text" id="n2" name="last-name">
                         <label for="eadd">EMAIL</label>
-                        <input type="email" id="eadd" name="email-add">
+                        <input 
+                            type="email"
+                            required 
+                            id="eadd" 
+                            name="email-add"
+                            placeholder="odinisking@valhalla.com">
+                        <label for="p1">PASSWORD</label>
+                        <input 
+                            type="password" 
+                            required 
+                            id="p1" 
+                            name="password-initial"
+                            placeholder="Enter your password">
+                        <label for="p2">CONFIRM PASSWORD</label>
+                        <input 
+                            type="password" 
+                            required 
+                            id="p2" 
+                            name="password-confirm"
+                            placeholder="Repeat your password">
                     </div>
                     <div class="right-form">
+                        <label for="n1">FIRST NAME</label>
+                        <input 
+                            type="text" 
+                            id="n1" 
+                            name="first-name"
+                            placeholder="Thor"
+                            minlength= "2"
+                            maxlength="25"
+                            required>
+                        <label for="n2">LAST NAME</label>
+                        <input 
+                            type="text" 
+                            id="n2" 
+                            name="last-name"
+                            placeholder="Odinson"
+                            minlength= "2"
+                            maxlength= "25"
+                            required>
                         <label for="phone">PHONE NUMBER</label>
-                        <input type="number" id="phone" name="phone-number">
-                        <label for="p1">PASSWORD</label>
-                        <input type="password" id="p1" name="password-initial">
-                        <label for="p2">CONFIRM PASSWORD</label>
-                        <input type="password" id="p2" name="password-confirm">
+                        <input 
+                        type="tel"
+                        required 
+                        id="phone" 
+                        name="phone-number"
+                        placeholder="123-456-7891">
                     </div>
                 </form>
             </section>

@@ -109,7 +109,7 @@ fieldset {
     box-sizing: border-box;
     /* border-radius: 3px; */
     border: 2px;
-    border-radius: 5px;
+    border-radius: 2px;
     line-height: 1.5rem;
     padding-left: 0.4rem;
     outline: none;
@@ -123,28 +123,34 @@ input:invalid:required:not(:focus) {
     font-weight: bold;
     background-color: rgb(78, 0, 0);
     border: 2px solid rgb(0, 0, 0);
-    outline: solid 3px rgb(78, 0, 0);    
+    outline: solid 3px rgb(237, 185, 185);
+    border-radius: 2px;    
 }
 
-input:focus::placeholder {
-    color: transparent; /* Hides the placeholder text when focused */
-}
 
-input:placeholder-shown:invalid:required {
+input:placeholder-shown:invalid:required,
+input:not(:placeholder-shown) {
     box-shadow: none;
-    color: rgb(255, 0, 0);
-    font-weight: bold;
+    color: rgb(0, 0, 0);
     background-color: rgb(253, 253, 253);
+    outline: none;
+    border-radius: 2px;
+    border: 2px solid WHITE;
+    line-height: 1.5rem;
+    padding-left: 0.4rem;
     outline: none;
 }
 
 input:valid:required:not(:focus) {
     box-shadow: 0px 0px 5px 0.005px #faebad85;
     color: #2c2300;
-    font-weight: bold;
     background: linear-gradient(135deg, #b98800b3, #bb9500, #b98800b3); /* The gradient */
     background-size: 100% 100%; /* Makes the gradient more dynamic */
     border: 2px solid #504724;
+    border-radius: 2px;
+    line-height: 1.5rem;
+    padding-left: 0.4rem;
+    outline: none;
 }
 
 body{
@@ -243,7 +249,7 @@ body{
 }
 
 .hero {
-    margin-bottom: 2rem;
+    margin-bottom: 4.5rem;
 }
 
 .form-container{
@@ -251,7 +257,7 @@ body{
     margin-left: 50px;
     color: #dae2e7;
     padding: 1rem 0 1rem 0;
-    margin-bottom: 0.1rem;
+    margin-bottom: 4rem;
 }
 
 .form-container > *{
@@ -264,7 +270,7 @@ body{
     display: flex;
     padding-bottom: 1rem;
     font-size: 0.833em;
-    margin: 0 0 0.5rem 0rem ;
+    margin: 0 0 0rem 2rem ;
     padding: 0;
 }
 
@@ -320,7 +326,7 @@ button:active {
   }
   .another {
     font-weight: lighter;
-    font-size: 1.22rem;
+    font-size: 1.20rem;
     max-width: 35rem;
     font-family: 'roboto';
     line-height: 1.44rem;
@@ -338,10 +344,13 @@ button:active {
     
   }
   .lets {
-    font-weight: bold;
-    font-size: 1.2rem;
+    font-weight: 600;
+    font-size: 2.5rem;
     margin-bottom: 1rem;
     padding: 0;
+    font-family: 'norse';
+    margin-top: 0;
+    line-height: 0.7;
   }
   a {
     color: #c39c00;
@@ -351,6 +360,6 @@ button:active {
 
   .lower-part{
     margin-top: 2rem;
-    margin-bottom: 12rem;
+    margin-bottom: 8rem;
   }
   

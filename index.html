@@ -36,7 +36,9 @@
                             required 
                             id="p1" 
                             name="password-initial"
-                            placeholder="Enter your password">
+                            placeholder="Enter your password"
+                            pattern="(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}" 
+                            >
                         <label for="p2">CONFIRM PASSWORD</label>
                         <input 
                             type="password" 
@@ -68,9 +70,11 @@
                         <input 
                         type="tel"
                         required 
+                        
                         id="phone" 
                         name="phone-number"
-                        placeholder="123-456-7891">
+                        placeholder="123-456-7891"
+                        pattern="^\d{3}-\d{3}-\d{4}$">
                     </div>
                 </form>
             </section>
